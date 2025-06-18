@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+  font-family: 'Indie Flower', cursive !important;
+  background: #eb83f5; 
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+::selection {
+  background: transparent;
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 1.2;
+  font-family: 'Amatic SC', cursive !important;
+  margin: 10px 0;
+}
+
+.color1 {
+  color: #db2777; 
+}
+
+.color2 {
+  color: #a21caf; 
+}
+
+.card {
+  color: #e414e4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  background: #fff; 
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.05),
+    20px 0 60px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.1);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.05),
+    0 10px 80px rgba(0, 0, 0, 0.15);
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #fbcfe8; 
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #fbcfe8; 
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 0.7s;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card .bark {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.card .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   display: block;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-150deg);
+}
+
+.card:hover .bark {
+  opacity: 1;
+  transition: 0.6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, 0.05) inset;
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  z-index: -1;
+  margin-top: 70px;
+}
+
+.card .details p {
+  font-size: 12px;
+  line-height: 1;
+  transform: rotate(-2deg);
+  margin: 6px 0;
+  color: #c513a7; 
+}
+
+.card .details h4 {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+
+
