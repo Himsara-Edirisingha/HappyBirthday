@@ -17,7 +17,7 @@ const BirthdayCard = () => {
 
   return (
     <>
-      <audio ref={audioRef} src="src/tone/bdsong.mp3" preload="auto" />
+      <audio ref={audioRef} src="/bdsong.mp3" preload="auto" />
 
       <div
         className="card"
@@ -26,7 +26,7 @@ const BirthdayCard = () => {
       >
         <div className="imgBox">
           <div className="bark"></div>
-          <img src="src/images/cover.png" alt="Card Front" />
+          <img src="/cover.png" alt="Card Front" />
         </div>
 
         <div className="details">
