@@ -52,22 +52,30 @@ const BirthdayCard = () => {
 
   return (
     <>
-      <audio ref={audioRef} src="/bdsong.mp3" preload="auto" />
+      <audio ref={audioRef} src="/perfect.mp3" preload="auto" />
 
       <div className="card interactive">
         <div className="imgBox">
-          <img src="/cover.png" alt="Cover" />
+          <img src="/bg.png" alt="Cover" />
         </div>
 
         <div className="details valentine">
-          <h4 className="color1">Hey you ❤️</h4>
+          <h4 className="color1">Hey Chooty Nona ❤️</h4>
           {!answered && (
             <>
-              <h4 className="color2 question">Will you be my Valentine?</h4>
-              <p className="lead">I can't imagine a day without you by my side.</p>
+              <h4 className="color2 question">
+                I Have a Question For You!!! ❤️
+              </h4>
+              <p className="lead">
+                10 months, countless smiles, and my favorite memories , all with
+                you.
+                <br />
+                So here’s my question… <br />
+                Will you be my Valentine? 💘
+              </p>
               <div className="buttons" ref={buttonsRef}>
                 <button className="btn yes" onClick={handleYes}>
-                  Yes 💖
+                  Yes, always 💖
                 </button>
                 <button
                   ref={noRef}
@@ -77,7 +85,7 @@ const BirthdayCard = () => {
                   onMouseMove={moveNoAway}
                   style={noStyle}
                 >
-                  No 😢
+                  You sure? 🥺
                 </button>
               </div>
             </>
@@ -85,21 +93,26 @@ const BirthdayCard = () => {
 
           {answered === "yes" && (
             <div className="result yes-result">
-              <h4>She said yes! 🎉</h4>
-              <p>I'm the luckiest. Can't wait to make memories together.</p>
+              <h4>Answer accepted 💘</h4>
+              <p>Thank you for being you , and for choosing me ❤️</p>
+              <p className="small-note">
+                Even if you had clicked “No”, auto-correct would’ve stepped in
+                😌 You’re my Valentine ❤️
+              </p>
             </div>
           )}
 
           {answered === "no" && (
             <div className="result no-result">
-              <h4>Oh—</h4>
-              <p>Thank you for being honest. Sending you a warm hug anyway.</p>
+              <h4>❌ Wrong answer detected.</h4>
+              <p>Correct answer: YES 💖</p>
+              <p>Auto correct applied.</p>
+              <p>You’re my Valentine 😌❤️</p>
+              <p>Moda Hoonthuwa❤️</p>
             </div>
           )}
-
-          <p className="small-note">Tip: Click the heart to play music.</p>
         </div>
-{/* 
+        {/* 
         <button
           className="floating-heart"
           aria-label="play"
